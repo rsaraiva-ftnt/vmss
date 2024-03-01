@@ -17,14 +17,14 @@
             "minValue": 0,
             "type": "Int"
         },
-        "ExternalLBBackendAddressPoolIds": {
-            "type": "Array"
+        //"ExternalLBBackendAddressPoolIds": {
+         //   "type": "Array"
         },
-        "ExternalLBInboundNatPoolIdsBYOL": {
-            "type": "Array"
+        //"ExternalLBInboundNatPoolIdsBYOL": {
+         //   "type": "Array"
         },
-        "ExternalLBInboundNatPoolIdsPAYG": {
-            "type": "Array"
+        //"ExternalLBInboundNatPoolIdsPAYG": {
+        //    "type": "Array"
         },
         "FunctionAppName": {
             "type": "String"
