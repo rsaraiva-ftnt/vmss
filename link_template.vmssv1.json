@@ -376,7 +376,7 @@
         //},
         //"networkInterfaceConfigurationsBYOL": "[concat(createArray(variables('networkInterfaceConfigurationSubnet1BYOL')), skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]",
         //"networkInterfaceConfigurationsPAYG": "[concat(createArray(variables('networkInterfaceConfigurationSubnet1PAYG')), skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]"
-    //},
+    },
     "resources": [
         {
             "type": "Microsoft.Compute/virtualMachineScaleSets",
