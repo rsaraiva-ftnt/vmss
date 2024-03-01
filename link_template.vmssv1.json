@@ -19,13 +19,13 @@
         },
         //"ExternalLBBackendAddressPoolIds": {
          //   "type": "Array"
-        },
+        //},
         //"ExternalLBInboundNatPoolIdsBYOL": {
          //   "type": "Array"
-        },
+        //},
         //"ExternalLBInboundNatPoolIdsPAYG": {
         //    "type": "Array"
-        },
+        //},
         "FunctionAppName": {
             "type": "String"
         },
