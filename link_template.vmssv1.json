@@ -336,46 +336,46 @@
                 }
             ]
         },
-        //"networkInterfaceConfigurationSubnet1BYOL": {
-          //  "name": "nic-config-subnet1",
-           // "properties": {
-               // "primary": true,
-              //  "enableIPForwarding": true,
-              //  "ipConfigurations": [
-              //      {
-              //          "name": "ip-config-subnet1",
-               //         "properties": {
-               //             "Subnet": {
-               //                 "id": "[parameters('SubnetIds')[0]]"
-               //             },
-                           //"loadBalancerBackendAddressPools": "[createArray(variables('externalLBBackendAddressPools').externalLBBackendAddressPoolsCopyIt[0])]",
+         "networkInterfaceConfigurationSubnet1BYOL": {
+            "name": "nic-config-subnet1",
+            "properties": {
+                "primary": true,
+                "enableIPForwarding": true,
+                "ipConfigurations": [
+                    {
+                        "name": "ip-config-subnet1",
+                        "properties": {
+                            "Subnet": {
+                                "id": "[parameters('SubnetIds')[0]]"
+                            },
+                            //"loadBalancerBackendAddressPools": "[createArray(variables('externalLBBackendAddressPools').externalLBBackendAddressPoolsCopyIt[0])]",
                             //"loadBalancerInboundNatPools": "[if(empty(variables('externlLBInboundNatPoolsBYOL').externlLBInboundNatPoolsBYOLCopyIt), null(), variables('externlLBInboundNatPoolsBYOL').externlLBInboundNatPoolsBYOLCopyIt)]"
-                       // }
-                    //}
-               // ]
-           // }
-        //},
-        //"networkInterfaceConfigurationSubnet1PAYG": {
-           // "name": "nic-config-subnet1",
-           // "properties": {
-           //     "primary": true,
-            //    "enableIPForwarding": true,
-//    "ipConfigurations": [
-               //     {
-                 //       "name": "ip-config-subnet1",
-                  //      "properties": {
-                   //         "Subnet": {
-                   //             "id": "[parameters('SubnetIds')[0]]"
-                   //         },
+                        }
+                    }
+                ]
+            }
+        },
+        "networkInterfaceConfigurationSubnet1PAYG": {
+            "name": "nic-config-subnet1",
+            "properties": {
+                "primary": true,
+                "enableIPForwarding": true,
+                "ipConfigurations": [
+                    {
+                        "name": "ip-config-subnet1",
+                        "properties": {
+                            "Subnet": {
+                                "id": "[parameters('SubnetIds')[0]]"
+                            },
                             //"loadBalancerBackendAddressPools": "[createArray(variables('externalLBBackendAddressPools').externalLBBackendAddressPoolsCopyIt[0])]",
                             //"loadBalancerInboundNatPools": "[if(empty(variables('externlLBInboundNatPoolsPAYG').externlLBInboundNatPoolsPAYGCopyIt), null(), variables('externlLBInboundNatPoolsPAYG').externlLBInboundNatPoolsPAYGCopyIt)]"
-                       //}
-                   //}
-               // ]
-           // }
-        //},
-        "networkInterfaceConfigurationsBYOL": "[skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1)]",
-        "networkInterfaceConfigurationsPAYG": "[skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1)]"
+                        }
+                    }
+                ]
+            }
+        },
+        "networkInterfaceConfigurationsBYOL": "[concat(createArray(variables('networkInterfaceConfigurationSubnet1BYOL')), skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]",
+        "networkInterfaceConfigurationsPAYG": "[concat(createArray(variables('networkInterfaceConfigurationSubnet1PAYG')), skip(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]"
     },
     "resources": [
         {
