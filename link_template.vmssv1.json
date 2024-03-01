@@ -17,15 +17,15 @@
             "minValue": 0,
             "type": "Int"
         },
-        "ExternalLBBackendAddressPoolIds": {
-            "type": "Array"
-        },
-        "ExternalLBInboundNatPoolIdsBYOL": {
-            "type": "Array"
-        },
-        "ExternalLBInboundNatPoolIdsPAYG": {
-            "type": "Array"
-        },
+        //"ExternalLBBackendAddressPoolIds": {
+         ///   "type": "Array"
+        //},
+        //"ExternalLBInboundNatPoolIdsBYOL": {
+        //    "type": "Array"
+        //},
+        //"ExternalLBInboundNatPoolIdsPAYG": {
+         //   "type": "Array"
+        //},
         "FunctionAppName": {
             "type": "String"
         },
