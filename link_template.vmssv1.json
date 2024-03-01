@@ -374,8 +374,8 @@
                // ]
            // }
         //},
-        "networkInterfaceConfigurationsBYOL": "[concat(createArray(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]",
-        "networkInterfaceConfigurationsPAYG": "[concat(createArray(variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]"
+        "networkInterfaceConfigurationsBYOL": "[variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]",
+        "networkInterfaceConfigurationsPAYG": "[variables('networkInterfaceConfigurationNonLoadBalancingSubnets').networkInterfaceConfigurationNonLoadBalancingSubnetsCopyIt, 1))]"
     },
     "resources": [
         {
